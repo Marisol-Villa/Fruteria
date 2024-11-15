@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+
+
+<header class="header">
+    <div class="contenedor">
+        <div class="barra">
+            <a class="logo" href="Menu.html">
+                <h1 class="logo_nombre no_margin centrar_texto">Frutería <span class="logo_bold">Exótica</span></h1>
+            </a>
+            <nav class="navegacion">
+                <a href="Tienda.html" class="navegacion_enlace">Tienda</a>
+                <a href="Sucursales.html" class="navegacion_enlace">Sucursales</a>
+                <a href="Sesion.html" class="navegacion_enlace">Inicio de sesión</a>
+                <div class="container-busqueda">
+                    <input type="text" placeholder="Buscar">
+                    <div class="btn"><i class="fas fa-search"></i></div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="header_texto">
+        <h2 class="no_margin">Frutería</h2>
+        <p class="no_margin">Compra ahora</p>
+    </div>
+</header>
+
+
+<!-- Carrusel de Ofertas -->
+<div class="carrusel">
+    <div class="carrusel-container" id="carruselContainer">
+
+        <div class="carrusel-item"><img src="img/img1.jpg" alt="Oferta 1"></div>
+        <div class="carrusel-item"><img src="img/img2.jpg" alt="Oferta 2"></div>
+        <div class="carrusel-item"><img src="img/img3.jpg" alt="Oferta 3"></div>
+    </div>
+    <button class="carrusel-control carrusel-control-prev" onclick="moverCarrusel(-1)">&#10094;</button>
+    <button class="carrusel-control carrusel-control-next" onclick="moverCarrusel(1)">&#10095;</button>
+    <div class="carrusel-indicators" id="carruselIndicators">
+        <span class="carrusel-indicator" onclick="irACarrusel(0)"></span>
+        <span class="carrusel-indicator" onclick="irACarrusel(1)"></span>
+        <span class="carrusel-indicator" onclick="irACarrusel(2)"></span>
+    </div>
+</div>
+
+<script src="Carrusel.js"></script>
+</body>
+</html>

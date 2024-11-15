@@ -1,0 +1,365 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    --Primario: #787878;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+}
+
+.no_margin { margin: 0; }
+.centrar_texto { text-align: center; }
+
+.header {
+    background-image: url(../img/fondotania3.jpeg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header_texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--blanco);
+}
+
+.logo_nombre { font-weight: 400; }
+.logo_bold { font-weight: 700; }
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navegacion_enlace {
+    font-size: 1.8rem;
+    color: var(--blanco);
+    text-align: center;
+}
+
+/* Buscador */
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    outline: none;
+    height: 40px;
+    width: 0;
+    padding: 0 20px;
+    color: #000;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    border: 1px solid #D50000;
+    transition: all 0.7s ease;
+}
+
+input:focus, .container:hover input {
+    width: 200px;
+}
+
+::placeholder { color: grey; }
+
+.btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #D50000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn i {
+    font-size: 20px;
+    color: var(--blanco);
+    transition: all 0.7s ease;
+}
+
+.btn:hover { background: #C00000; }
+
+
+
+
+
+
+
+/* Carrusel */
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto; /* Centra el carrusel con espacio superior e inferior */
+    overflow: hidden;
+    border-radius: 10px; /* Esquinas redondeadas para el contenedor */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    height: 300px; /* Altura fija del carrusel */
+}
+
+.carrusel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 100%; /* Ajusta la altura del contenedor de cada imagen */
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: 100%; /* La imagen se adapta a la altura del carrusel */
+    object-fit: cover; /* Recorta la imagen si es necesario para llenar el espacio */
+    display: block;
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+
+/* Controles de navegación */
+.carrusel-control {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--blanco);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Botones circulares */
+    transition: background-color 0.3s ease;
+}
+
+.carrusel-control:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Efecto de hover en los botones */
+}
+
+.carrusel-control-prev {
+    left: 15px;
+}
+
+.carrusel-control-next {
+    right: 15px;
+}
+
+/* Indicadores */
+.carrusel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carrusel-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carrusel-indicator.active {
+    background-color: var(--blanco); /* Indicador activo */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el contenedor del formulario de inicio de sesión */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.4rem;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #555;
+    font-size: 1.4rem;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.login-container p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.login-container a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* Estilos para el contenedor del formulario de inicio de sesión */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.4rem;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #555;
+    font-size: 1.4rem;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.login-container p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.login-container a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
