@@ -129,49 +129,46 @@ input:focus, .container:hover input {
 
 
 
-
-
-
 /* Carrusel */
 .carrusel {
     position: relative;
     width: 100%;
-    max-width: 800px;
-    margin: 30px auto; /* Centra el carrusel con espacio superior e inferior */
+    max-width: 1000px;
+    margin: 50px auto;
     overflow: hidden;
-    border-radius: 10px; /* Esquinas redondeadas para el contenedor */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-    height: 300px; /* Altura fija del carrusel */
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    height: 400px;
 }
 
 .carrusel-container {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carrusel-item {
     min-width: 100%;
     box-sizing: border-box;
-    height: 100%; /* Ajusta la altura del contenedor de cada imagen */
+    height: 100%;
+    position: relative;
 }
 
 .carrusel-item img {
     width: 100%;
-    height: 100%; /* La imagen se adapta a la altura del carrusel */
-    object-fit: cover; /* Recorta la imagen si es necesario para llenar el espacio */
+    height: 100%;
+    object-fit: cover;
     display: block;
-    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    border-radius: 15px;
 }
-
 
 /* Controles de navegación */
 .carrusel-control {
     position: absolute;
     top: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--blanco);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    color: #fff;
     border: none;
     cursor: pointer;
     font-size: 24px;
@@ -179,20 +176,22 @@ input:focus, .container:hover input {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%; /* Botones circulares */
-    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
 .carrusel-control:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Efecto de hover en los botones */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1));
+    transform: scale(1.1);
 }
 
 .carrusel-control-prev {
-    left: 15px;
+    left: 20px;
 }
 
 .carrusel-control-next {
-    right: 15px;
+    right: 20px;
 }
 
 /* Indicadores */
@@ -203,6 +202,7 @@ input:focus, .container:hover input {
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
+    z-index: 10;
 }
 
 .carrusel-indicator {
@@ -211,12 +211,37 @@ input:focus, .container:hover input {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.carrusel-indicator:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
 }
 
 .carrusel-indicator.active {
-    background-color: var(--blanco); /* Indicador activo */
+    background-color: #ffffff;
 }
+
+.carrusel-item .texto-carrusel {
+    position: absolute;
+    bottom: 5%; /* Baja el cuadro más cerca del borde inferior */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro opaco */
+    padding: 2rem 4rem; /* Aumenta el espacio interno para hacerlo más grande */
+    color: #ffffff; /* Texto blanco */
+    font-size: 2rem; /* Incrementa el tamaño del texto */
+    border-radius: 15px; /* Esquinas redondeadas más pronunciadas */
+    text-align: center; /* Centra el texto */
+    width: 80%; /* Aumenta el ancho del cuadro */
+    max-width: 800px; /* Limita el tamaño máximo del cuadro */
+    opacity: 1; /* Siempre visible */
+    z-index: 5; /* Asegura que esté por encima de otros elementos */
+}
+
+
+
 
 
 
@@ -363,3 +388,232 @@ input:focus, .container:hover input {
 .login-container a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------*/
+/* Sección: Nuestros Productos */
+.productos {
+    padding: 4rem 0;
+    background-color: var(--Primario);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.productos_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.producto {
+    background-color: var(--blanco);
+    color: var(--negro);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.producto p {
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+/* Sección: Sobre Nosotros */
+.sobre-nosotros {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    color: var(--negro);
+    text-align: center;
+}
+
+.sobre-nosotros p {
+    max-width: 60rem;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+/* Seccion: todavia no se  */
+.opiniones {
+    padding: 4rem 0;
+    background-color: #fff;
+    text-align: center;
+    color: var(--Primario);
+}
+
+.opiniones .opinion {
+    margin: 2rem auto;
+    max-width: 40rem;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    font-style: italic;
+    color: var(--Primario);
+    border-left: 4px solid var(--Primario);
+    padding-left: 1rem;
+}
+
+.opiniones span {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--negro);
+}
+
+
+
+
+/* Seccion: Contacto */
+.contacto {
+    padding: 4rem 0;
+    background-color: var(--Primario);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.contacto form {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+.contacto button {
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #d50000;
+    color: var(--blanco);
+    font-size: 1.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto button:hover {
+    background-color: #c00000;
+}
+
+
+
+/*CODIGO PARA EL RELOJ*/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+body{
+	background: url(#) #000;
+	background-size:cover;
+	color: #fff;
+	font-size: 16px;
+	font-family: Oswald, Arial;
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+}
+
+.contenedor{
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+	margin-top: 15%;
+}
+
+.tiempo {
+	width: 40%;
+	margin: auto;
+}
+
+.tiempo p {
+	display: inline-block;
+	line-height: 1em;	
+}
+
+.fecha {
+	font-size: 1.5em;
+	margin-bottom: 0.3124rem;
+	background: rgba(255, 255, 255, .5);
+	padding: 20px;
+	width: 100%;
+}
+
+.reloj {
+	width: 100%;
+	padding: 20px;
+	font-size: 4em;
+	background: rgba(255, 255, 255, .5);
+}
+
+.reloj .caja{
+	display: inline-block;
+}
+
+.reloj .segundos, .reloj .ampm {
+	font-size: 0.5em;
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+    padding: 2rem 0;
+    background-color: #333;
+    color: var(--blanco);
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+
+
+
