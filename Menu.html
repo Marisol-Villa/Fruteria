@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Frutería Exótica - Compra frutas frescas y exóticas.">
     <title>Frutería Exótica - Menú</title>
-    <!-- Normalize CSS para estilos base -->
+    <!-- Normalize CSS -->
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- Iconos -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-
-
-
-    <!--  principal -->
+    
+    <!-- Cabecera -->
     <header class="header">
         <div class="contenedor">
             <div class="barra">
@@ -27,35 +25,34 @@
                     </h1>
                 </a>
 
-                <!-- Navegacion del menu -->
+                <!-- Navegación del menú -->
                 <nav class="navegacion">
                     <a href="Tienda.html" class="navegacion_enlace">Tienda</a>
                     <a href="Sucursales.html" class="navegacion_enlace">Sucursales</a>
-                    <a href="Sesion.html" class="navegacion_enlace">Inicio de sesión</a>
-                    <!-- Búsqueda -->
-                    <div class="container-busqueda">
-                        <input type="text" placeholder="Buscar" aria-label="Buscar productos">
-                        <button class="btn-busqueda" aria-label="Buscar">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
+                    <a href="Sesion.html" class="navegacion_enlace">Inicio de Sesión</a>
                 </nav>
+
+                <!-- Barra de búsqueda -->
+                <div class="container-busqueda">
+                    <input type="text" placeholder="Buscar" aria-label="Buscar productos">
+                    <button class="btn-busqueda" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
-
-
-        <div class="contenedor">
+        <!-- Reloj -->
+        <div class="contenedor reloj-container">
             <div class="tiempo">
                 <div class="fecha">
                     <p id="diaSemana" class="diaSemana"></p>
-                    <p id="dia" class="dia"></p>				
-                    <p>de </p>
+                    <p id="dia" class="dia"></p>
+                    <p>de</p>
                     <p id="mes" class="mes"></p>
-                    <p>del </p>
+                    <p>del</p>
                     <p id="anio" class="anio"></p>
                 </div>
-    
                 <div class="reloj">
                     <p id="horas" class="horas"></p>
                     <p>:</p>
@@ -68,30 +65,21 @@
                 </div>
             </div>
         </div>
-     
-
-
-        
-        <!-- principal -->
-        <div class="header_texto">
-            <h2>Frutería</h2>
-            <p>Compra ahora</p>
-        </div>
     </header>
 
+
+    
+    <!-- Carrusel -->
     <div class="carrusel">
         <div class="carrusel-container" id="carruselContainer">
             <div class="carrusel-item">
-                <img src="#" alt="Oferta 1">
-                <div class="texto-carrusel">Frutas frescas al mejor precio</div>
+                <img src="img/Car1.png" alt="Oferta 1">
             </div>
             <div class="carrusel-item">
-                <img src="#" alt="Oferta 2">
-                <div class="texto-carrusel">¡Promociones especiales esta semana!</div>
+                <img src="img/Car2.png" alt="Oferta 2">
             </div>
             <div class="carrusel-item">
-                <img src="#" alt="Oferta 3">
-                <div class="texto-carrusel">Frutas exóticas y deliciosas</div>
+                <img src="img/Car3.png" alt="Oferta 3">
             </div>
         </div>
         <button class="carrusel-control carrusel-control-prev" onclick="moverCarrusel(-1)">&#10094;</button>
@@ -102,67 +90,80 @@
             <span class="carrusel-indicator" onclick="irACarrusel(2)"></span>
         </div>
     </div>
-    
 
-    <!-- Sección: Nuestros Productos -->
+
+
+
+    <!-- Nuestros Productos -->
     <section class="productos">
         <h2 class="seccion_titulo">Nuestros Productos</h2>
         <div class="productos_grid">
             <div class="producto">
-                <img src="img/banana.jpg" alt="promocion1" />
-                <h3>Promociones1</h3>
-                <p>DESCRIPCION</p>
+                <img src="img/Producto1.png" alt="Promoción 1">
+                <h3>Precio original $52.50</h3>
+                <p>Fresa jumbo</p>
             </div>
             <div class="producto">
-                <img src="img/mango.jpg" alt="promocion2" />
-                <h3>promociones2</h3>
-                <p>DESCRIPCION</p>
+                <img src="img/Producto2.png" alt="Promoción 2">
+                <h3>Precio original $48.5</h3>
+                <p>Mandarina mexicana</p>
             </div>
             <div class="producto">
-                <img src="img/pineapple.jpg" alt="promocion3" />
-                <h3>promociones3</h3>
-                <p>DESCRIPCION</p>
+                <img src="img/Producto3.png" alt="Promoción 3">
+                <h3>Precio original $52</h3>
+                <p>Sandia amarilla</p>
             </div>
         </div>
     </section>
 
-    <!-- Sección: Sobre Nosotros -->
+
+
+
+    <!-- Sobre Nosotros -->
     <section class="sobre-nosotros">
         <h2 class="seccion_titulo">Sobre Nosotros</h2>
-        <p>Frutería Exótica</p>
     </section>
 
-    <!-- Seccion -->
+
+
+    <!-- Opiniones -->
     <section class="opiniones">
-        <h2 class="seccion_titulo"></h2>
+        <h2 class="seccion_titulo">Fruteria Exótica</h2>
         <div class="opinion">
-            <p>"s"</p>
-            <span>s</span>
+            <p>"Ven y conoce nuestras instalaciones!"</p>
+            <span>FruteriaExótica, donde podras encontrar una gran variedad de productos</span>
         </div>
-        <div class="opinion">
-            <p>"o"</p>
-            <span>0</span>
         </div>
     </section>
 
-    <!--  Contacto -->
-    <section class="contacto">
-        <h2 class="seccion_titulo">Contáctanos</h2>
-        <form action="#" method="POST">
-            <input type="text" placeholder="Tu nombre" required>
-            <input type="email" placeholder="Tu correo electrónico" required>
-            <textarea placeholder="Tu mensaje" rows="4" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
 
-    <!-- Pie de página -->
+
+<!-- Contacto -->
+<section class="contacto">
+    <h2 class="seccion_titulo">Contáctanos</h2>
+    <form action="index.php" method="POST">
+        <input type="text" name="Nombre" placeholder="Nombre" required>
+        <input type="email" name="Correo" placeholder="Correo lectrónico" required>
+        <textarea name="Comentario" placeholder="Comentario" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+
+
+
+    <!-- Pie de pagina -->
     <footer class="footer">
-        <p>&copy; 2024 Fruteria Exotica</p>
+        <p>&copy; 2024 Frutería Exótica</p>
+        
     </footer>
 
-    <!-- Script del carrusel y reloj-->
+    
+ 
+    <!-- Scripts -->
     <script src="Carrusel.js"></script>
     <script src="reloj.js"></script>
+    
+
 </body>
 </html>

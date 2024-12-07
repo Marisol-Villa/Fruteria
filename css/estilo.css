@@ -40,12 +40,19 @@ h1, h2, h3, h4 {
 .centrar_texto { text-align: center; }
 
 .header {
-    background-image: url(../img/fondotania3.jpeg);
+ 
+    background: transparent; 
+    position: relative; 
+    z-index: 10; 
+    background: url('../img/FondoPrincipal.jpg') no-repeat center center fixed;
+    background-size: cover; 
+   
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
+
 
 .header_texto {
     text-align: center;
@@ -225,19 +232,19 @@ input:focus, .container:hover input {
 
 .carrusel-item .texto-carrusel {
     position: absolute;
-    bottom: 5%; /* Baja el cuadro más cerca del borde inferior */
-    left: 50%; /* Centra horizontalmente */
+    bottom: 5%;
+    left: 50%; 
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro opaco */
-    padding: 2rem 4rem; /* Aumenta el espacio interno para hacerlo más grande */
-    color: #ffffff; /* Texto blanco */
-    font-size: 2rem; /* Incrementa el tamaño del texto */
-    border-radius: 15px; /* Esquinas redondeadas más pronunciadas */
-    text-align: center; /* Centra el texto */
-    width: 80%; /* Aumenta el ancho del cuadro */
-    max-width: 800px; /* Limita el tamaño máximo del cuadro */
-    opacity: 1; /* Siempre visible */
-    z-index: 5; /* Asegura que esté por encima de otros elementos */
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 2rem 4rem;
+    color: #ffffff; 
+    font-size: 2rem;
+    border-radius: 15px; 
+    text-align: center;
+    width: 80%; 
+    max-width: 800px; 
+    opacity: 1; 
+    z-index: 5; 
 }
 
 
@@ -251,10 +258,7 @@ input:focus, .container:hover input {
 
 
 
-
-
-
-/* Estilos para el contenedor del formulario de inicio de sesión */
+/* Inicio de sesion */
 .login-container {
     max-width: 400px;
     margin: 50px auto;
@@ -324,7 +328,6 @@ input:focus, .container:hover input {
 
 
 
-/* Estilos para el contenedor del formulario de inicio de sesión */
 .login-container {
     max-width: 400px;
     margin: 50px auto;
@@ -588,17 +591,6 @@ body{
 	font-size: 0.5em;
 	display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
